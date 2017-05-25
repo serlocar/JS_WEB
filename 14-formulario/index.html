@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FORMULARIOS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <h1>-FORMULARIO-</h1>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Datos del Alumno</legend>
+            <div class="dos">
+                <article>
+                    <fieldset>
+                        <legend>Identificación</legend>
+                        <div class="input">
+                            <label for="correo">Cuenta de Correo:</label>
+                            <input class="cien" type="mail" placeholder="Escribe tu Correo" id="correo">
+                        </div>
+                        <div class="input">
+                            <label for="pass">Introduzca su clave de Acceso:</label>
+                            <input class="cien" type="password" placeholder="Escribe tu Clave" id="pass">
+                        </div>
+                        <div class="input">
+                            <label for="rpass">Repite la clave de Acceso:</label>
+                            <input class="cien" type="mail" placeholder="Confirma tu Clave" id="rpass">
+                        </div>
+                    </fieldset>
+                </article>
+                <article class="ados">
+                    <fieldset>
+                        <legend>Curso</legend>
+                        <div class="dos">
+                            <div class="radio">
+                                <input type="radio" name="curso" checked>Programador Web
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="curso">Programador de Sistemas
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="curso">Programador de Objetos
+                            </div>
+                        </div>
+                        <div class="dos">
+                            <select name="curso2" id="curso2">
+                                    <option value="HTML">HTML</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="CSS">CSS</option>
+                                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                                </select>
+                        </div>
+                    </fieldset>
+                </article>
+                <article>
+                    <fieldset>
+                        <legend>Confirmar</legend>
+                        <input type="submit" value="Enviar" class="boton" id="btn">
+                        <input type="reset" value="Borrar" class="boton">
+                    </fieldset>
+                </article>
+            </div>
+            <div class="dos">
+                <article>
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+                        <div class="input">
+                            <label for="nombre">Nombre:</label>
+                            <input class="cien" type="text" placeholder="Escribe tu Nombre" id="nombre">
+                        </div>
+                        <div class="input">
+                            <label for="1apellido">Primer Apellido:</label>
+                            <input class="cien" type="text" placeholder="Primer Apellido" id="1apellido">
+                        </div>
+                        <div class="input">
+                            <label for="2apellido">Segundo Apellido:</label>
+                            <input class="cien" type="text" placeholder="Segundo Apellido" id="2apellido">
+                        </div>
+                        <fieldset>
+                            <legend>Fecha de Nacimiento</legend>
+                            <article>
+                                <div class="fechas">
+                                    <div class="tres">
+                                        <label for="dia">Dia:</label>
+                                        <input type="number" placeholder="Dia" id="dia" value="0">
+                                    </div>
+                                    <div class="tres">
+                                        <label for="mes">Mes:</label>
+                                        <input type="number" placeholder="Mes" id="mes" value="0">
+                                    </div>
+                                    <div class="tres">
+                                        <label for="ano">Año:</label>
+                                        <input type="number" placeholder="Año" id="ano" value="1985">
+                                    </div>
+                            </article>
+                        </fieldset>
+                    </fieldset>
+                </article>
+                <article>
+                    <fieldset>
+                        <legend>Aficiones</legend>
+                        <div class="aficiones">
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Deporte">Deporte
+                            </div>
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Musica">Musica
+                            </div>
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Lectura">Lectura
+                            </div>
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Fotografía">Fotografía
+                            </div>
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Baile">Baile
+                            </div>
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Senderismo">Senderismo
+                            </div>
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Cine">Cine
+                            </div>
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Pintura">Pintura
+                            </div>
+                            <div class="aficion">
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Viajar">Viajar
+                            </div>
+                        </div>
+                    </fieldset>
+                </article>
+                </div>
+                <article>
+                    <fieldset>
+                        <legend>Observaciones</legend>
+                        <textarea name="" id="texta" rows="5" cols="100"></textarea>
+                    </fieldset>
+                </article>
+        </fieldset>
+    </form>
+</body>
+
+</html>

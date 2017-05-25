@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-shadow: 0.05em 0.05em blue;
+}
+
+form {
+    overflow: auto;
+}
+
+ados {
+    overflow: auto;
+}
+
+.dos {
+    float: left;
+    width: 50%;
+}
+
+article {
+    padding: 10px;
+}
+
+.cien {
+    width: 100%;
+}
+
+.input {
+    margin-bottom: 6px;
+}
+
+input {
+    padding: 5px;
+}
+
+.fechas {
+    overflow: auto;
+}
+
+.tres {
+    float: left;
+    width: 33.3%;
+}
+
+.aficiones {
+    overflow: auto;
+    color: white;
+}
+
+.aficion {
+    float: left;
+    width: 33.3%;
+    padding: 5px;
+}
+
+.radio {
+    padding: 5px;
+    color: white;
+}
+
+textarea {
+    width: 100%;
+}
+
+fieldset {
+    background-color: blue;
+    border: 1px solid white;
+}
+
+legend {
+    color: white;
+    font-size: 1.3em;
+    text-shadow: 0.05em 0.05em black;
+}
+
+label {
+    color: white;
+}
