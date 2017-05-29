@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -14,13 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="fav_icon.png">
-    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
     <h1>-FORMULARIO-</h1>
-    <form action="" method="get">
+    <form action="" method="get" id="form">
         <fieldset>
             <legend>Datos del Alumno</legend>
             <div class="dos">
@@ -28,16 +22,16 @@
                     <fieldset>
                         <legend>Identificación</legend>
                         <div class="input">
-                            <label for="correo">Cuenta de Correo:</label>
-                            <input class="cien" type="mail" placeholder="Escribe tu Correo" id="correo">
+                            <label for="mail">Cuenta de Correo:</label>
+                            <input class="cien" type="email" placeholder="Escribe tu Correo" id="mail" name="mail" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
                         </div>
                         <div class="input">
                             <label for="pass">Introduzca su clave de Acceso:</label>
-                            <input class="cien" type="password" placeholder="Escribe tu Clave" id="pass">
+                            <input class="cien" type="password" placeholder="Escribe tu Clave" id="pass" name="pass" required>
                         </div>
                         <div class="input">
                             <label for="rpass">Repite la clave de Acceso:</label>
-                            <input class="cien" type="mail" placeholder="Confirma tu Clave" id="rpass">
+                            <input class="cien" type="password" placeholder="Confirma tu Clave" id="rpass" name="rpass" required>
                         </div>
                     </fieldset>
                 </article>
@@ -46,29 +40,29 @@
                         <legend>Curso</legend>
                         <div class="dos">
                             <div class="radio">
-                                <input type="radio" name="curso" checked>Programador Web
+                                <input type="radio" name="curso" checked value="Programador Web">Programador Web
                             </div>
                             <div class="radio">
-                                <input type="radio" name="curso">Programador de Sistemas
+                                <input type="radio" name="curso" value="Programador de Sistemas">Programador de Sistemas
                             </div>
                             <div class="radio">
-                                <input type="radio" name="curso">Programador de Objetos
+                                <input type="radio" name="curso" value="Programador de Objetos">Programador de Objetos
                             </div>
                         </div>
                         <div class="dos">
-                            <select name="curso2" id="curso2" size="4">
-                                <option value="HTML">HTML</option>
-                                <option value="PHP">PHP</option>
-                                <option value="CSS">CSS</option>
-                                <option value="JAVASCRIPT">JAVASCRIPT</option>
-                            </select>
+                            <select name="curso2" id="curso2">
+                                    <option value="HTML">HTML</option>
+                                    <option value="PHP">PHP</option>
+                                    <option value="CSS">CSS</option>
+                                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                                </select>
                         </div>
                     </fieldset>
                 </article>
                 <article>
                     <fieldset>
                         <legend>Confirmar</legend>
-                        <input type="submit" value="Enviar" class="boton" id="btn">
+                        <input type="button" value="Enviar" class="boton" id="submit">
                         <input type="reset" value="Borrar" class="boton">
                     </fieldset>
                 </article>
@@ -79,32 +73,22 @@
                         <legend>Datos Personales</legend>
                         <div class="input">
                             <label for="nombre">Nombre:</label>
-                            <input class="cien" type="text" placeholder="Escribe tu Nombre" id="nombre">
+                            <input required class="cien" type="text" placeholder="Escribe tu Nombre" id="nombre" name="nombre">
                         </div>
                         <div class="input">
                             <label for="1apellido">Primer Apellido:</label>
-                            <input class="cien" type="text" placeholder="Primer Apellido" id="1apellido">
+                            <input class="cien" type="text" placeholder="Primer Apellido" id="primer_apellido" name="primer_apellido" required>
                         </div>
                         <div class="input">
                             <label for="2apellido">Segundo Apellido:</label>
-                            <input class="cien" type="text" placeholder="Segundo Apellido" id="2apellido">
+                            <input class="cien" type="text" placeholder="Segundo Apellido" id="segundo_apellido" name="segundo_apellido" required>
                         </div>
                         <fieldset>
                             <legend>Fecha de Nacimiento</legend>
                             <article>
-                                <div class="fechas">
-                                    <div class="tres">
-                                        <label for="dia">Dia:</label>
-                                        <input type="number" placeholder="Dia" id="dia" value="0">
-                                    </div>
-                                    <div class="tres">
-                                        <label for="mes">Mes:</label>
-                                        <input type="number" placeholder="Mes" id="mes" value="0">
-                                    </div>
-                                    <div class="tres">
-                                        <label for="ano">Año:</label>
-                                        <input type="number" placeholder="Año" id="ano" value="1985">
-                                    </div>
+                                <div class="fecha">
+                                    <input type="date">
+                                </div>
                             </article>
                         </fieldset>
                     </fieldset>
@@ -114,44 +98,48 @@
                         <legend>Aficiones</legend>
                         <div class="aficiones">
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Deporte">Deporte
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Deporte" id="Afi1">Deporte
                             </div>
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Musica">Musica
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Musica" id="Afi2">Musica
                             </div>
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Lectura">Lectura
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Lectura" id="Afi3">Lectura
                             </div>
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Fotografía">Fotografía
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Fotografía" id="Afi4">Fotografía
                             </div>
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Baile">Baile
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Baile" id="Afi5">Baile
                             </div>
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Senderismo">Senderismo
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Senderismo" id="Afi6">Senderismo
                             </div>
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Cine">Cine
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Cine" id="Afi7">Cine
                             </div>
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Pintura">Pintura
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Pintura" id="Afi8">Pintura
                             </div>
                             <div class="aficion">
-                                <input class="aficiones" type="checkbox" name="aficiones" value="Viajar">Viajar
+                                <input class="aficiones" type="checkbox" name="aficiones" value="Viajar" id="Afi9">Viajar
                             </div>
                         </div>
                     </fieldset>
                 </article>
-                </div>
-                <article>
-                    <fieldset>
-                        <legend>Observaciones</legend>
-                        <textarea name="" id="texta" rows="5" cols="100"></textarea>
-                    </fieldset>
-                </article>
+            </div>
+            <article>
+                <fieldset>
+                    <legend>Observaciones</legend>
+                    <textarea name="" id="texta" rows="5" cols="100"></textarea>
+                </fieldset>
+            </article>
         </fieldset>
     </form>
+    <div id="resultado" class="oculto">
+        <h3>Los datos introducidos son:</h3>
+        <p id="fecha_final"></p>
+    </div>
 </body>
 
 </html>

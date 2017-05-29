@@ -42,13 +42,8 @@ input {
     padding: 5px;
 }
 
-.fechas {
-    overflow: auto;
-}
-
-.tres {
-    float: left;
-    width: 33.3%;
+.fecha {
+    text-align: center;
 }
 
 .aficiones {
@@ -84,4 +79,21 @@ legend {
 
 label {
     color: white;
+}
+
+#resultado {
+    color: white;
+}
+
+.oculto {
+    display: none;
+}
+
+.bloque {
+    display: block;
+}
+
+h3 {
+    color: white;
+    text-shadow: 0.05em 0.05em blue;
 }
