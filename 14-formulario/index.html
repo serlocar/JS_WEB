@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div id="alerta"></div>
     <h1>-FORMULARIO-</h1>
     <form action="" method="get" id="form">
         <fieldset>
@@ -22,15 +23,15 @@
                     <fieldset>
                         <legend>Identificación</legend>
                         <div class="input">
-                            <label for="mail">Cuenta de Correo:</label>
+                            <label for="mail"><span>*</span>Cuenta de Correo:</label>
                             <input class="cien" type="email" placeholder="Escribe tu Correo" id="mail" name="mail" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
                         </div>
                         <div class="input">
-                            <label for="pass">Introduzca su clave de Acceso:</label>
+                            <label for="pass"><span>*</span>Introduzca su clave de Acceso:</label>
                             <input class="cien" type="password" placeholder="Escribe tu Clave" id="pass" name="pass" required>
                         </div>
                         <div class="input">
-                            <label for="rpass">Repite la clave de Acceso:</label>
+                            <label for="rpass"><span>*</span>Repite la clave de Acceso:</label>
                             <input class="cien" type="password" placeholder="Confirma tu Clave" id="rpass" name="rpass" required>
                         </div>
                     </fieldset>
@@ -72,15 +73,15 @@
                     <fieldset>
                         <legend>Datos Personales</legend>
                         <div class="input">
-                            <label for="nombre">Nombre:</label>
+                            <label for="nombre"><span>*</span>Nombre:</label>
                             <input required class="cien" type="text" placeholder="Escribe tu Nombre" id="nombre" name="nombre">
                         </div>
                         <div class="input">
-                            <label for="1apellido">Primer Apellido:</label>
+                            <label for="1apellido"><span>*</span>Primer Apellido:</label>
                             <input class="cien" type="text" placeholder="Primer Apellido" id="primer_apellido" name="primer_apellido" required>
                         </div>
                         <div class="input">
-                            <label for="2apellido">Segundo Apellido:</label>
+                            <label for="2apellido"><span>*</span>Segundo Apellido:</label>
                             <input class="cien" type="text" placeholder="Segundo Apellido" id="segundo_apellido" name="segundo_apellido" required>
                         </div>
                         <fieldset>
@@ -134,6 +135,8 @@
                     <textarea name="" id="texta" rows="5" cols="100"></textarea>
                 </fieldset>
             </article>
+            <p class="info">-LOS CAMPOS CON * DEBEN DE SER RELLENADOS-</p>
+            <div id="#fecha_final2"></div>
         </fieldset>
     </form>
     <div id="resultado" class="oculto">

@@ -8,8 +8,8 @@ class Formulario {
             this.oSegundoApellido = document.querySelector("#segundo_apellido"),
             this.oResultado = document.querySelector("#resultado"),
             this.oOpciones = document.querySelector("#curso2"),
-            this.oCurso = document.querySelectorAll("[name = curso]")
-        this.oAfi1 = document.querySelector("#Afi1"),
+            this.oCurso = document.querySelectorAll("[name = curso]"),
+            this.oAfi1 = document.querySelector("#Afi1"),
             this.oAfi2 = document.querySelector("#Afi2"),
             this.oAfi3 = document.querySelector("#Afi3"),
             this.oAfi4 = document.querySelector("#Afi4"),
@@ -19,24 +19,25 @@ class Formulario {
             this.oAfi8 = document.querySelector("#Afi8"),
             this.oAfi9 = document.querySelector("#Afi9"),
             this.oFechaFinal = document.querySelector("#fecha_final"),
+            this.oAlerta = document.querySelector("#alerta"),
             this.aSalida = []
     }
 
     getTextos() {
         this.aSalida = [{
-            etiqueta: "Email:",
+            etiqueta: "<span class='etiquetas'>Email: </span>",
             valor: this.oMail.value
         }, {
-            etiqueta: "Contraseña:",
+            etiqueta: "<span class='etiquetas'>Contraseña: </span>",
             valor: this.oPass.value
         }, {
-            etiqueta: "Nombre:",
+            etiqueta: "<span class='etiquetas'>Nombre: </span>",
             valor: this.oNombre.value
         }, {
-            etiqueta: "Primer Apellido:",
+            etiqueta: "<span class='etiquetas'>Primer Apellido: </span>",
             valor: this.oPrimerApellido.value
         }, {
-            etiqueta: "Segundo Apellido:",
+            etiqueta: "<span class='etiquetas'>Segundo Apellido: </span>",
             valor: this.oSegundoApellido.value
         }, ]
     };
@@ -44,7 +45,7 @@ class Formulario {
         for (let i = 0; i < this.oCurso.length; i++) {
             if (this.oCurso[i].checked) {
                 this.aSalida[this.aSalida.length] = {
-                    etiqueta: "Tu curso Elegido es:",
+                    etiqueta: "<span class='etiquetas'>Tu curso Elegido es: </span>",
                     valor: this.oCurso[i].value.toUpperCase()
                 }
             };
@@ -55,14 +56,14 @@ class Formulario {
         var textoSeleccionado = oOpcion.text;
         var valorSeleccionado = oOpcion.value;
         this.aSalida[this.aSalida.length] = {
-            etiqueta: "Asignatura Eligida:",
+            etiqueta: "<span class='etiquetas'>Asignatura Eligida: </span>",
             valor: textoSeleccionado
         }
     };
     getCheckbox() {
         if (this.oAfi1.checked) {
             this.aSalida[this.aSalida.length] = {
-                etiqueta: "Aficiones:",
+                etiqueta: "<span class='etiquetas'>Aficiones: </span>",
                 valor: this.oAfi1.value
             }
         }
@@ -120,16 +121,32 @@ class Formulario {
         this.oDia = (d.getDate());
         this.oMes = (d.getMonth() + 1);
         this.oAno = (d.getFullYear());
-        this.oFechaFinal.innerHTML = this.oDia + "/" + this.oMes + "/" + this.oAno;
+        this.oFechaFinal.innerHTML = "<span class='etiquetas'>Fecha de inscripción: </span>" + this.oDia + "/" + this.oMes + "/" + this.oAno;
     }
 
     recogeDatos() {
-        this.fecha();
-        this.getTextos();
-        this.getRRadiobuttons();
-        this.getSelectOptions();
-        this.getCheckbox();
-        this.escribeDatos();
+        if (this.oMail.value == "") {
+            this.oAlerta.innerHTML = "EL CAMPO CORREO TIENE QUE SER RELLENADO"
+        } else if (this.oNombre.value == "") {
+            this.oAlerta.innerHTML = "EL CAMPO NOMBRE TIENE QUE SER RELLENADO"
+        } else if (this.oPrimerApellido.value == "") {
+            this.oAlerta.innerHTML = "LOS DOS CAMPOS DE APELLIDO TIENE QUE SER RELLENADO"
+        } else if (this.oSegundoApellido.value == "") {
+            this.oAlerta.innerHTML = "LOS DOS CAMPOS DE APELLIDO TIENE QUE SER RELLENADO"
+        } else if (this.oPass.value == "") {
+            this.oAlerta.innerHTML = "EL CAMPO CONTRASEÑA ESTA VACIO TIENE QUE SER RELLENADO"
+        } else if (this.oNombre.oRpass == "") {
+            this.oAlerta.innerHTML = "EL CAMPO CONTRASEÑA ESTA VACIO TIENE QUE SER RELLENADO"
+        } else if (this.oPass.value != this.oRpass.value) {
+            this.oAlerta.innerHTML = "LAS CONTRASEÑAS NO COINCIDEN"
+        } else {
+            this.fecha();
+            this.getTextos();
+            this.getRRadiobuttons();
+            this.getSelectOptions();
+            this.getCheckbox();
+            this.escribeDatos();
+        }
     }
 
     escribeDatos() {
